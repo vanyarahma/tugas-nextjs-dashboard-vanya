@@ -18,6 +18,7 @@ export default async function InvoicesTable({
       <div className="inline-block min-w-full align-middle">
         <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
           <div className="md:hidden">
+            
             {invoices?.map((invoice) => (
               <div
                 key={invoice.id}
@@ -90,7 +91,7 @@ export default async function InvoicesTable({
                         className="rounded-full"
                         width={28}
                         height={28}
-                        alt={`${invoice.name}'s profile picture`}
+                        alt=""
                       />
                       <p>{invoice.name}</p>
                     </div>
