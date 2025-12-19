@@ -28,9 +28,10 @@ const FormSchema = z.object({
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
 // Use Zod to update the expected types
 const UpdateInvoice = FormSchema.omit({ id: true, date: true });
+
 export async function deleteInvoice(id: string) {
-   throw new Error('Failed to Delete Invoice');
-    await sql`DELETE FROM invoices WHERE id = ${id}`;
+  throw new Error('Failed to Delete Invoice');
+  await sql`DELETE FROM invoices WHERE id = ${id}`;
   revalidatePath('/dashboard/invoices');
 }
 // ...
