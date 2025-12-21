@@ -93,7 +93,9 @@ export default async function CustomersTable({
                             className="rounded-full"
                             width={28}
                             height={28}
+                            alt={`${customer.name}'s profile picture`}
                           />
+
                           <p>{customer.name}</p>
                         </div>
                       </td>
